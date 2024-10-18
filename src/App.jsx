@@ -4,6 +4,7 @@ import Home from './components/Home/Home';
 import Program from './components/Program/Program';
 import Membership from './components/Membership/Membership';
 import Trainers from './components/Trainers/Trainers';
+import About from './components/About/About';
 
 function App() {
 
@@ -14,6 +15,7 @@ function App() {
       <Program />
       <Membership />
       <Trainers />
+      < About />
     </div>
   )
 }
