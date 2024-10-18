@@ -21,11 +21,11 @@
   }
   
   .slide:nth-child(1) {
-    background-image: url('../../assets/slide1.jpg');
+    background-image: url('../../assets/photo1.jpeg');
   }
   
   .slide:nth-child(2) {
-    background-image: url('../../assets/slide2.jpg');
+    background-image: url('../../assets/photo2.jpeg');
   }
   
   .slide-content {

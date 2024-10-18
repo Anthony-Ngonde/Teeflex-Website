@@ -6,7 +6,7 @@ function Program() {
     <section id="program" className="program">
       <div className="program-container">
         <div className="program-info">
-          <h2>Our Programs</h2>
+          <h2>Program</h2>
           <p>Experience a wide range of fitness programs designed to help you achieve your health and wellness goals. Our expert trainers are here to guide you every step of the way.</p>
           <div className="program-features">
             <div className="feature">

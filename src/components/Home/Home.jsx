@@ -23,8 +23,8 @@ function Home() {
       </div>
       <div className={`slide ${currentSlide === 1 ? 'active' : ''}`}>
         <div className="slide-content">
-          <h2>TRANSFORM YOUR LIFE</h2>
-          <h3>ONE REP AT A TIME</h3>
+          <h2>CONSISTENCY IS KEY</h2>
+          <h3>TO SUCCESS IN THE GYM</h3>
         </div>
       </div>
     </section>
