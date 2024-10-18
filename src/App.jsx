@@ -5,6 +5,8 @@ import Program from './components/Program/Program';
 import Membership from './components/Membership/Membership';
 import Trainers from './components/Trainers/Trainers';
 import About from './components/About/About';
+import Footer from './components/Footer/Footer';
+import Contact from './components/Contact/Contact';
 
 function App() {
 
@@ -16,6 +18,8 @@ function App() {
       <Membership />
       <Trainers />
       < About />
+      <Contact />
+      <Footer />
     </div>
   )
 }

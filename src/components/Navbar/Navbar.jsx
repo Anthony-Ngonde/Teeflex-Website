@@ -8,7 +8,7 @@ function Navbar() {
       <div className="navbar-container">
         <div className="navbar-logo">
           <img src={logo} alt="Teeflex Fitness Logo" />
-          <span>Teeflex Fitness</span>
+          <span>TEEFLEX GYM</span>
         </div>
         <ul className="navbar-menu">
           <li><a href="#home">HOME</a></li>
