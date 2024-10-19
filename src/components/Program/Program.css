@@ -89,6 +89,10 @@
   .program-timetable tr:nth-child(even) {
     background-color: rgba(0, 159, 255, 0.1);
   }
+
+  .program-timetable tr:hover {
+    background-color: #d0eaff;
+  }
   
   .charges {
     margin-top: 1rem;
