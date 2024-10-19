@@ -21,11 +21,11 @@
   }
   
   .slide:nth-child(1) {
-    background-image: url('../../assets/photo1.jpeg');
+    background-image: url('../../assets/gym.jpg');
   }
   
   .slide:nth-child(2) {
-    background-image: url('../../assets/photo2.jpeg');
+    background-image: url('../../assets/weight.jpg');
   }
   
   .slide-content {

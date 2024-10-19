@@ -6,7 +6,7 @@ function About() {
     <section id="about" className="about">
       <div className="about-container">
         <div className="about-image">
-          <img src="https://i.pinimg.com/236x/8a/8a/36/8a8a36cb4d4eaa5ae4e874ec9567a7e1.jpg" alt="About Teeflex Gym" />
+          <img src="src/assets/gym.jpg" loading='lazy' alt="About Teeflex Gym" />
         </div>
         <div className="about-content">
           <h2>About</h2>

@@ -1,48 +1,98 @@
 .about {
-    padding: 4rem 0;
+    padding: 4rem 1rem;
     background-color: #fff;
-}
-
-.about-container {
+  }
+  
+  .about-container {
     max-width: 1200px;
     margin: 0 auto;
     display: flex;
-    justify-content: space-between;
+    flex-direction: column; /* Stack content vertically on small screens */
     align-items: center;
-    padding: 0 1rem;
-    gap: 2rem; /* Add a gap between image and content */
-}
-
-.about-image {
+    gap: 2rem;
+  }
+  
+  /* Adjusting layout for larger screens */
+  @media (min-width: 768px) {
+    .about-container {
+      flex-direction: row; /* Row layout for medium to large screens */
+      justify-content: space-between;
+      padding: 0 1rem;
+    }
+  }
+  
+  /* About Image Styling */
+  .about-image {
     flex: 1;
-    max-height: 400px; /* Limit the max height */
-    overflow: hidden; /* Ensure the image doesn’t overflow */
+    width: 100%; /* Make the image full-width on small screens */
+    max-height: 300px; /* Adjust max height for better scaling */
+    overflow: hidden;
     border-radius: 10px;
-}
-
-.about-image img {
+  }
+  
+  /* For larger screens, increase the max height */
+  @media (min-width: 768px) {
+    .about-image {
+      max-height: 400px;
+    }
+  }
+  
+  .about-image img {
     width: 100%;
     height: 100%;
-    object-fit: cover; /* Ensure the image scales properly */
-}
-
-.about-content {
+    object-fit: cover;
+  }
+  
+  /* About Content Styling */
+  .about-content {
     flex: 1;
-}
-
-.about-content h2 {
-    font-size: 2.5rem;
+    text-align: center; /* Center align content on small screens */
+  }
+  
+  /* Increase font sizes for larger screens */
+  .about-content h2 {
+    font-size: 2rem;
     margin-bottom: 1rem;
     color: #333;
-}
-
-.about-content p {
+  }
+  
+  @media (min-width: 768px) {
+    .about-content h2 {
+      font-size: 2.5rem;
+      text-align: left; /* Align left on larger screens */
+    }
+  }
+  
+  .about-content p {
     margin-bottom: 1rem;
     color: #666;
     line-height: 1.6;
-}
-
-/* Adding margin to ensure spacing between sections */
-#about {
-    margin-bottom: 4rem; 
-}
+  }
+  
+  /* Responsive text alignment */
+  @media (min-width: 768px) {
+    .about-content p {
+      text-align: left;
+    }
+  }
+  
+  /* Section spacing adjustments */
+  #about {
+    margin-bottom: 4rem;
+  }
+  
+  /* Additional media queries for small devices */
+  @media (max-width: 480px) {
+    .about-content h2 {
+      font-size: 1.8rem;
+    }
+  
+    .about-content p {
+      font-size: 0.9rem;
+    }
+  
+    .about-image {
+      max-height: 250px;
+    }
+  }
+  

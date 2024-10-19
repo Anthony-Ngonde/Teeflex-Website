@@ -1,97 +1,159 @@
 .membership {
-    padding: 4rem 0;
-    background-color: #fff;
-  }
-  
-  .membership-container {
-    max-width: 1200px;
-    margin: 0 auto;
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    padding: 0 1rem;
-  }
-  
+  padding: 4rem 1rem;
+  background-color: #fff;
+}
+
+.membership-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap; /* Allows wrapping on smaller screens */
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+/* Responsive adjustments for membership info and rates */
+.membership-info,
+.membership-rates {
+  flex: 1;
+  margin: 1rem 0;
+}
+
+/* Margin for membership-info on larger screens */
+@media (min-width: 768px) {
   .membership-info {
-    flex: 1;
     margin-right: 2rem;
   }
-  
+}
+
+.membership-info h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: #333;
+}
+
+/* Font size adjustment for smaller screens */
+@media (min-width: 768px) {
   .membership-info h2 {
     font-size: 2.5rem;
-    margin-bottom: 1rem;
-    color: #333;
   }
-  
-  .membership-info p {
-    margin-bottom: 2rem;
-    color: #666;
-  }
-  
+}
+
+.membership-info p {
+  margin-bottom: 2rem;
+  color: #666;
+}
+
+/* Responsive membership features layout */
+.membership-features {
+  display: flex;
+  flex-direction: column; /* Stack features vertically on small screens */
+}
+
+/* Display features in a row for larger screens */
+@media (min-width: 768px) {
   .membership-features {
-    display: flex;
+    flex-direction: row;
     justify-content: space-between;
   }
-  
-  .feature {
-    text-align: center;
+}
+
+.feature {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+/* Icon size and feature text adjustments */
+.feature i {
+  font-size: 2.5rem;
+  color: #00a8ff;
+  margin-bottom: 1rem;
+}
+
+.feature h3 {
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+  color: #333;
+}
+
+.feature p {
+  color: #666;
+}
+
+/* Membership rates styles */
+.membership-rates {
+  background-color: #f5f5f5;
+  padding: 1.5rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.membership-rates h3 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  color: #333;
+  text-align: center;
+}
+
+/* Responsive table styles */
+.membership-rates table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.membership-rates th,
+.membership-rates td {
+  padding: 0.75rem;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+/* Table header styling */
+.membership-rates th {
+  background-color: #00a8ff;
+  color: #fff;
+}
+
+/* Alternating row colors */
+.membership-rates tr:nth-child(even) {
+  background-color: #fff;
+}
+
+.contact {
+  margin-top: 1rem;
+  font-style: italic;
+  color: #666;
+  text-align: center;
+}
+
+/* Media queries for responsiveness */
+@media (max-width: 768px) {
+  .membership-container {
+    flex-direction: column; /* Stack membership-info and rates vertically */
+    align-items: stretch;
   }
-  
-  .feature i {
-    font-size: 3rem;
-    color: #00a8ff;
-    margin-bottom: 1rem;
-  }
-  
-  .feature h3 {
-    font-size: 1.2rem;
-    margin-bottom: 0.5rem;
-    color: #333;
-  }
-  
-  .feature p {
-    color: #666;
-  }
-  
-  .membership-rates {
-    flex: 1;
-    background-color: #f5f5f5;
-    padding: 2rem;
-    border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  }
-  
-  .membership-rates h3 {
+
+  .membership-info h2 {
     font-size: 1.8rem;
-    margin-bottom: 1rem;
-    color: #333;
-    text-align: center;
   }
-  
-  .membership-rates table {
-    width: 100%;
-    border-collapse: collapse;
+
+  .membership-info p {
+    font-size: 1rem;
   }
-  
-  .membership-rates th,
-  .membership-rates td {
-    padding: 0.75rem;
-    text-align: left;
-    border-bottom: 1px solid #ddd;
+
+  .membership-rates h3 {
+    font-size: 1.2rem;
   }
-  
-  .membership-rates th {
-    background-color: #00a8ff;
-    color: #fff;
+
+  .feature i {
+    font-size: 2rem;
   }
-  
-  .membership-rates tr:nth-child(even) {
-    background-color: #fff;
+
+  .feature h3 {
+    font-size: 1rem;
   }
-  
+
   .contact {
-    margin-top: 1rem;
-    font-style: italic;
-    color: #666;
-    text-align: center;
+    font-size: 0.9rem;
   }
+}

@@ -1,4 +1,110 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-    
+/* Global resets */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  overflow-x: hidden; /* Prevent horizontal scrolling */
+  max-width: 100%; /* Prevent body overflow */
+}
+
+.App {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* Main content styling */
+main {
+  flex: 1;
+}
+
+/* Section styling */
+section {
+  padding: 4rem 1rem;
+}
+
+/* Container styling */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+  width: 100%;
+}
+
+/* Responsive adjustments for smaller devices */
+@media (max-width: 768px) {
+  section {
+    padding: 2rem 1rem;
+  }
+
+  .container {
+    padding: 0 0.5rem;
+  }
+}
+
+/* Navbar styling */
+.navbar {
+  background-color: #000;
+  color: #fff;
+  padding: 1rem 0;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
+}
+
+/* Ensure the navbar doesn't cause overflow */
+.navbar * {
+  max-width: 100%;
+}
+
+/* Footer styling */
+.footer {
+  background-color: #fff;
+  color: #666;
+  padding: 4rem 1rem;
+  border-top: 1px solid #ddd;
+}
+
+/* Flex wrap for footer container to prevent overflow */
+.footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 100%;
+}
+
+/* Program section */
+.program {
+  padding: 4rem 1rem;
+  background: linear-gradient(135deg, #e0f7ff, #c2e8ff);
+}
+
+/* Flexbox adjustments for the program container */
+.program-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 100%;
+}
+
+/* Ensure elements in the program section don't overflow */
+.program-container * {
+  max-width: 100%;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .navbar, .footer-container, .program-container {
+    flex-direction: column;
+    align-items: center;
+  }
+}
