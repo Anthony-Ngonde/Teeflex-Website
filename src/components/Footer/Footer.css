@@ -12,6 +12,43 @@
   align-items: center;
   gap: 2rem;
 }
+.footer-bottom {
+  text-align: center;
+  margin-top: 2rem;
+  position: relative;
+}
+
+.back-to-top {
+  position: fixed;
+  right: 20px;
+  bottom: 40px;
+  background-color: #000;
+  color: #fff;
+  border: none;
+  padding: 0.8rem 1.2rem;
+  font-size: 1.2rem;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+  z-index: 1000;
+  animation: jump 1s infinite;
+}
+
+/* Change background color on hover */
+.back-to-top:hover {
+  background-color: #00a8ff;
+}
+
+/* Define the jumping animation */
+@keyframes jump {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
 
 /* Adjust layout for larger screens */
 @media (min-width: 768px) {

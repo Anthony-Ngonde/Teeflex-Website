@@ -1,9 +1,32 @@
-import React from 'react';
+import React,{useState,useEffect} from 'react';
 import logo from '../../assets/teeflex-logo.png';
 import './Footer.css';
 
-
 function Footer() {
+  const [isVisible, setIsVisible] = useState(false);
+
+  // Show the button when scrolled down 300px
+  const toggleVisibility = () => {
+    if (window.scrollY > 300) {
+      setIsVisible(true);
+    } else {
+      setIsVisible(false);
+    }
+  };
+
+  useEffect(() => {
+    window.addEventListener('scroll', toggleVisibility);
+    return () => {
+      window.removeEventListener('scroll', toggleVisibility);
+    };
+  }, []);
+
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    });
+  };
   return (
     <footer className="footer">
       <div className="footer-container">
@@ -46,6 +69,13 @@ function Footer() {
       </div>
       <div className="footer-bottom">
         <p>&copy; 2024 Web Design Mastery. All rights reserved.</p>
+        {isVisible && (
+          <button className="back-to-top" 
+          title='back to top'
+          onClick={scrollToTop}>
+            ↑ 
+          </button>
+        )}
       </div>
     </footer>
   );
