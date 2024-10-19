@@ -15,8 +15,8 @@ function Navbar() {
           <li><a href="#program">PROGRAM</a></li>
           <li><a href="#membership">MEMBERSHIP</a></li>
           <li><a href="#trainers">TRAINERS</a></li>
-          <li><a href="#about">ABOUT US</a></li>
-          <li><a href="#contact">CONTACT US</a></li>
+          <li><a href="#about">ABOUT</a></li>
+          <li><a href="#contact">CONTACT</a></li>
         </ul>
       </div>
     </nav>
