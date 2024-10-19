@@ -7,7 +7,7 @@ function Contact() {
       <div className="contact-container">
         <div className="contact-info">
           <h2>Contact Us</h2> {/* Added Contact Us header */}
-          <h3>Let's talk</h3>
+          {/* <h3>Let's talk</h3> */}
           <p>I'm currently available to take on new projects so feel free to send me a message about anything that you want to work on. You can contact anytime.</p>
           <div className="contact-details">
             <p><i className="fas fa-envelope"></i> info@teeflexgym.com</p>
