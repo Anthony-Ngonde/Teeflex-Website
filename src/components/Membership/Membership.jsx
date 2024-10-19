@@ -1,5 +1,7 @@
 import React from 'react';
 import './Membership.css';
+import '@fortawesome/fontawesome-free/css/all.min.css';
+
 
 function Membership() {
   return (
@@ -70,7 +72,7 @@ function Membership() {
               </tr>
             </tbody>
           </table>
-          <p className="contact">TEL 0700504156 / 0715198135</p>
+          {/* <p className="contact">TEL 0700504156 / 0715198135</p> */}
         </div>
       </div>
     </section>

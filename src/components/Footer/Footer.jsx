@@ -2,6 +2,7 @@ import React from 'react';
 import logo from '../../assets/teeflex-logo.png';
 import './Footer.css';
 
+
 function Footer() {
   return (
     <footer className="footer">
