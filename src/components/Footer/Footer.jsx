@@ -1,4 +1,4 @@
-import React,{useState,useEffect} from 'react';
+import React, { useState, useEffect } from 'react';
 import logo from '../../assets/teeflex-logo.png';
 import './Footer.css';
 
@@ -27,6 +27,7 @@ function Footer() {
       behavior: 'smooth'
     });
   };
+
   return (
     <footer className="footer">
       <div className="footer-container">
@@ -37,6 +38,7 @@ function Footer() {
             <a href="#"><i className="fab fa-facebook-f"></i></a>
             <a href="#"><i className="fab fa-instagram"></i></a>
             <a href="#"><i className="fab fa-twitter"></i></a>
+            <a href="#"><i className="fab fa-tiktok"></i></a> {/* Added TikTok Icon */}
           </div>
         </div>
         <div className="footer-links">
