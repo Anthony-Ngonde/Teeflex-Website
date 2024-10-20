@@ -35,11 +35,21 @@ function Footer() {
           <img src={logo} alt="Teeflex Fitness Logo" />
           <p>Elevate your fitness journey with our comprehensive gym offerings. From state-of-the-art equipment to personalized training programs, we're dedicated to helping you achieve your fitness goals.</p>
           <div className="social-icons">
-            <a href="#"><i className="fab fa-facebook-f"></i></a>
-            <a href="#"><i className="fab fa-instagram"></i></a>
-            <a href="#"><i className="fab fa-twitter"></i></a>
-            <a href="#"><i className="fab fa-tiktok"></i></a>
-            <a href="#"><i className="fab fa-youtube"></i></a>
+          <a href="https://www.facebook.com/profile.php?id=61564170611436" target="_blank" rel="noopener noreferrer">
+            <i className="fab fa-facebook-f"></i>
+            </a>
+            <a href="https://www.instagram.com/teeflexgym/?hl=en" target="_blank" rel="noopener noreferrer">
+            <i className="fab fa-instagram"></i>
+            </a>
+            <a href="https://x.com/teeflexgym" target="_blank" rel="noopener noreferrer">
+            <i className="fab fa-twitter"></i>
+            </a>
+            <a href="https://www.tiktok.com/@teeflexgym?_t=8q7ppy1bVvJ&_r=1&fbclid=PAZXh0bgNhZW0CMTEAAaa_K3wsTxK3C2RRKD_9gpmPaJyZ0PErYIq8ydcTuo0x1a2kTdsJhtj7X0E_aem_3nxYIQYmbddk6KMZKVmOlg" target="_blank" rel="noopener noreferrer">
+            <i className="fab fa-tiktok"></i>
+            </a>
+            <a href="https://www.youtube.com/@teeflexgymimara" target="_blank" rel="noopener noreferrer">
+            <i className="fab fa-youtube"></i>
+            </a>
           </div>
         </div>
         <div className="footer-links">
