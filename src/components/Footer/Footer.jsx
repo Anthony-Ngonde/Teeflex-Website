@@ -2,7 +2,6 @@ import React from 'react';
 import logo from '../../assets/teeflex-logo.png';
 import './Footer.css';
 
-
 function Footer() {
   return (
     <footer className="footer">
@@ -14,6 +13,7 @@ function Footer() {
             <a href="#"><i className="fab fa-facebook-f"></i></a>
             <a href="#"><i className="fab fa-instagram"></i></a>
             <a href="#"><i className="fab fa-twitter"></i></a>
+            <a href="#"><i className="fab fa-tiktok"></i></a> {/* Added TikTok Icon */}
           </div>
         </div>
         <div className="footer-links">
