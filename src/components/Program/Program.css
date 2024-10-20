@@ -107,6 +107,11 @@ body {
   width: 100%; /* Ensure table does not exceed the parent width */
   max-width: 100%;
   overflow-x: auto; /* Allow table scrolling if needed */
+  transition: transform 0.3s ease; /* Add transition for smooth hover effect */
+}
+
+.program-timetable:hover {
+  transform: translateY(-5px); /* Move the timetable up by 5px */
 }
 
 /* Responsive table styles */
