@@ -22,7 +22,7 @@ function Membership() {
               <p>Special rates for group work out sessions</p>
             </div>
             <div className="feature">
-              <i className="fas fa-dumbbell"></i>
+              <i className="fas fa-user-clock"></i>
               <h3>Personal Training</h3>
               <p>One-on-one sessions with our expert trainers</p>
             </div>
