@@ -13,7 +13,7 @@ body {
 
 .program {
   padding: 4rem 1rem;
-  background: linear-gradient(135deg, #e0f7ff, #c2e8ff);
+  background: linear-gradient(135deg, #f0fbff, #e8f7ff);
 }
 
 .program-container {
@@ -33,6 +33,8 @@ body {
   margin: 1rem 0;
   min-width: 0; /* Prevent flex items from overflowing */
 }
+
+
 
 /* Margin for program-info on larger screens */
 @media (min-width: 768px) {
@@ -132,6 +134,10 @@ body {
 /* Alternating row colors */
 .program-timetable tr:nth-child(even) {
   background-color: rgba(0, 159, 255, 0.1);
+}
+
+.program-timetable tr:hover {
+  background-color: #d0eaff;
 }
 
 .charges {
