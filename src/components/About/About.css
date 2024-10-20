@@ -28,6 +28,11 @@
     max-height: 300px; /* Adjust max height for better scaling */
     overflow: hidden;
     border-radius: 10px;
+    transition: transform 0.3s ease; /* Add smooth transition for hover effect */
+  }
+
+  .about-image:hover {
+    transform: translateY(-5px); /* Move the image up by 5px */
   }
   
   /* For larger screens, increase the max height */
