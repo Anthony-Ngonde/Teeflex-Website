@@ -16,8 +16,8 @@ function App() {
         <Home />
         <Program />
         <Membership />
-        <About />
         <Trainers />
+        <About />
         <Contact />
       </main>
       <Footer />

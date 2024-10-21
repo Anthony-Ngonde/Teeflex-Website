@@ -55,7 +55,7 @@
     color: #00a8ff;
   }
   
-  .join-btn {
+.join-btn {
     background-color: #00a8ff;
     color: #fff;
     border: none;
@@ -65,6 +65,6 @@
     transition: background-color 0.3s ease;
   }
   
-  .join-btn:hover {
+.join-btn:hover {
     background-color: #0088cc;
   }

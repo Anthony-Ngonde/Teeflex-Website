@@ -3,7 +3,7 @@ import './Trainers.css';
 
 function Trainers() {
     const trainers = [
-        { name: 'John Doe', specialty: 'Strength & Conditioning', image: 'https://i.pinimg.com/control/236x/43/c9/36/43c936339f94cd2842a6069b8b913f07.jpg' },
+        { name: 'Augustine Otieno', specialty: 'Strength & Conditioning', image: 'https://i.pinimg.com/control/236x/43/c9/36/43c936339f94cd2842a6069b8b913f07.jpg' },
 
         { name: 'Jane Smith', specialty: 'Yoga & Pilates', image: 'https://i.pinimg.com/control/236x/43/c9/36/43c936339f94cd2842a6069b8b913f07.jpg' },
         { name: 'Mike Johnson', specialty: 'Cardio & HIIT', image: 'https://i.pinimg.com/control/236x/43/c9/36/43c936339f94cd2842a6069b8b913f07.jpg' },

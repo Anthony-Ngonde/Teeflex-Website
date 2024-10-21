@@ -51,6 +51,8 @@
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
   }
+
+  
   
   @media (min-width: 768px) {
     .contact-info h2 {
@@ -100,16 +102,43 @@
   }
   
   .contact-form button {
-    padding: 0.75rem;
+    background-color: #00a8ff; /* Initial green color */
+    color: white;
+    padding: 10px 20px;
     border: none;
     border-radius: 5px;
-    background: #00a8ff;
-    color: #fff;
-    font-weight: bold;
     cursor: pointer;
-    transition: opacity 0.3s ease;
-    align-self: center; /* Center button on small screens */
-    width: 100%;
+    transition: background-color 0.3s ease, transform 0.1s ease; /* Smooth transitions */
+  }
+  
+  .contact-form button:hover {
+    background-color: #00a8ff; /* Darker green on hover */
+  }
+  
+  .contact-form button:active {
+    background-color: white; /* Change to white when active (clicked) */
+    color: #00a8ff; /* Change text color to green */
+    transform: scale(0.98); /* Slightly shrink the button when clicked */
+  }
+
+  .success-popup {
+    position: fixed;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #4CAF50; /* Green background */
+    color: white;
+    padding: 15px 20px;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+  }
+  
+  .success-icon {
+    margin-right: 10px;
+    font-size: 20px;
   }
   
   /* Adjust button width on larger screens */
