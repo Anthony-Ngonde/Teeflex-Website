@@ -27,8 +27,8 @@ function Navbar() {
   <li onClick={closeSidebar}><a href="#home">HOME</a></li>
   <li onClick={closeSidebar}><a href="#program">PROGRAM</a></li>
   <li onClick={closeSidebar}><a href="#membership">MEMBERSHIP</a></li>
-  <li onClick={closeSidebar}><a href="#trainers">TRAINERS</a></li>
-  <li onClick={closeSidebar}><a href="#about">ABOUT</a></li>
+  <li onClick={closeSidebar}><a href="#trainers">ABOUT</a></li>
+  <li onClick={closeSidebar}><a href="#about">TRAINERS</a></li>
   <li onClick={closeSidebar}><a href="#contact">CONTACT</a></li>
 </ul>
       </div>
