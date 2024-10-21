@@ -56,29 +56,29 @@ function Footer() {
           <div className="link-column">
             <h3>Company</h3>
             <ul>
-              <li><a href="#">Business</a></li>
-              <li><a href="#">Franchise</a></li>
-              <li><a href="#">Partnership</a></li>
-              <li><a href="#">Network</a></li>
+              <li><a href="#" onClick={(e) => e.preventDefault()}>Business</a></li>
+              <li><a href="#" onClick={(e) => e.preventDefault()}>Franchise</a></li>
+              <li><a href="#" onClick={(e) => e.preventDefault()}>Partnership</a></li>
+              <li><a href="#" onClick={(e) => e.preventDefault()}>Network</a></li>
             </ul>
           </div>
           <div className="link-column">
             <h3>About Us</h3>
             <ul>
-              <li><a href="#">Blogs</a></li>
-              <li><a href="#">Security</a></li>
-              <li><a href="#">Careers</a></li>
+              <li><a href="#" onClick={(e) => e.preventDefault()}>Blogs</a></li>
+              <li><a href="#" onClick={(e) => e.preventDefault()}>Security</a></li>
+              <li><a href="#" onClick={(e) => e.preventDefault()}>Careers</a></li>
             </ul>
           </div>
           <div className="link-column">
             <h3>Contact</h3>
             <ul>
-              <li><a href="#">Contact Us</a></li>
-              <li><a href="#">Privacy Policy</a></li>
-              <li><a href="#">Terms & Conditions</a></li>
+              <li><a href="#" onClick={(e) => e.preventDefault()}>Contact Us</a></li>
+              <li><a href="#" onClick={(e) => e.preventDefault()}>Privacy Policy</a></li>
+              <li><a href="#" onClick={(e) => e.preventDefault()}>Terms & Conditions</a></li>
             </ul>
           </div>
-        </div>
+</div>
       </div>
       <div className="footer-bottom">
         <p>&copy; 2024 Web Design Mastery. All rights reserved.</p>
