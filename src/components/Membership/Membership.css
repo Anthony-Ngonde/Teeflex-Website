@@ -1,5 +1,5 @@
 .membership {
-  padding: 4rem 1rem;
+  padding: 2rem 1rem; /* Reduce padding for smaller screens */
   background-color: #fff;
 }
 
@@ -7,32 +7,42 @@
   max-width: 1200px;
   margin: 0 auto;
   display: flex;
-  flex-wrap: wrap; /* Allows wrapping on smaller screens */
+  flex-direction: column; /* Default to column for better stacking on small screens */
   justify-content: space-between;
-  align-items: flex-start;
+  align-items: stretch; /* Ensure full width on small devices */
 }
 
 /* Responsive adjustments for membership info and rates */
 .membership-info,
 .membership-rates {
-  flex: 1;
   margin: 1rem 0;
+  width: 100%; /* Full width on small screens */
 }
 
 /* Margin for membership-info on larger screens */
 @media (min-width: 768px) {
+  .membership-container {
+    flex-direction: row; /* Row layout for larger screens */
+    flex-wrap: wrap;
+  }
+  
   .membership-info {
     margin-right: 2rem;
+    width: 48%; /* Allow side-by-side layout */
+  }
+
+  .membership-rates {
+    width: 48%; /* Allow side-by-side layout */
   }
 }
 
 .membership-info h2 {
-  font-size: 2rem;
+  font-size: 1.8rem;
   margin-bottom: 1rem;
   color: #333;
 }
 
-/* Font size adjustment for smaller screens */
+/* Font size adjustment for larger screens */
 @media (min-width: 768px) {
   .membership-info h2 {
     font-size: 2.5rem;
@@ -40,7 +50,8 @@
 }
 
 .membership-info p {
-  margin-bottom: 2rem;
+  margin-bottom: 1.5rem;
+  font-size: 0.9rem;
   color: #666;
 }
 
@@ -60,20 +71,21 @@
 
 .feature {
   text-align: center;
-  margin-bottom: 2rem;
+  margin-bottom: 1.5rem;
 }
 
 /* Icon size and feature text adjustments */
 .feature i {
-  font-size: 2.5rem;
+  font-size: 2rem;
   color: #00a8ff;
-  margin-bottom: 1rem;
+  margin-bottom: 0.5rem;
   transition: transform 0.3s ease;
 }
 
 .feature:hover i {
   transform: translateY(-5px); 
 }
+
 .feature h3 {
   font-size: 1.2rem;
   margin-bottom: 0.5rem;
@@ -86,9 +98,8 @@
 
 /* Membership rates styles */
 .membership-rates {
-  flex: 1;
   background-color: #fff;
-  padding: 2rem;
+  padding: 1.5rem;
   border-radius: 10px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease; 
@@ -99,7 +110,7 @@
 }
 
 .membership-rates h3 {
-  font-size: 1.8rem;
+  font-size: 1.5rem;
   margin-bottom: 1rem;
   color: #333;
   text-align: center;
@@ -113,7 +124,7 @@
 
 .membership-rates th,
 .membership-rates td {
-  padding: 1rem;
+  padding: 0.8rem; /* Reduced padding for better fit */
   text-align: center;
   border: 1px solid #ddd;
 }
@@ -131,7 +142,6 @@
   background-color: #d0eaff;
 }
 
-
 .contact {
   margin-top: 1rem;
   font-style: italic;
@@ -139,19 +149,14 @@
   text-align: center;
 }
 
-/* Media queries for responsiveness */
-@media (max-width: 768px) {
-  .membership-container {
-    flex-direction: column; /* Stack membership-info and rates vertically */
-    align-items: stretch;
-  }
-
+/* Media queries for even smaller devices */
+@media (max-width: 480px) {
   .membership-info h2 {
-    font-size: 1.8rem;
+    font-size: 1.5rem;
   }
 
   .membership-info p {
-    font-size: 1rem;
+    font-size: 0.85rem;
   }
 
   .membership-rates h3 {
@@ -159,7 +164,7 @@
   }
 
   .feature i {
-    font-size: 2rem;
+    font-size: 1.8rem;
   }
 
   .feature h3 {
@@ -167,6 +172,12 @@
   }
 
   .contact {
-    font-size: 0.9rem;
+    font-size: 0.8rem;
+  }
+
+  .membership-rates table th,
+  .membership-rates table td {
+    font-size: 0.8rem; /* Smaller font size for small screens */
+    padding: 0.6rem;
   }
 }
