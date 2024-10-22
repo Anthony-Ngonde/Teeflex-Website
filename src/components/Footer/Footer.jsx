@@ -33,7 +33,7 @@ function Footer() {
       <div className="footer-container">
         <div className="footer-logo">
           <img src={logo} alt="Teeflex Fitness Logo" />
-          <p>Elevate your fitness journey with our comprehensive gym offerings. From state-of-the-art equipment to personalized training programs, we're dedicated to helping you achieve your fitness goals.</p>
+          <p>Elevate your fitness journey with our comprehensive gym offerings. From state-of-the-art equipment to personalized training programs, we are dedicated to helping you achieve your fitness goals.</p>
           <div className="social-icons">
           <a href="https://www.facebook.com/profile.php?id=61564170611436" target="_blank" rel="noopener noreferrer">
             <i className="fab fa-facebook-f"></i>
@@ -81,7 +81,7 @@ function Footer() {
 </div>
       </div>
       <div className="footer-bottom">
-        <p>&copy; 2024 Web Design Mastery. All rights reserved.</p>
+        <p>&copy; 2024 Teeflex Gym and Fitness Center. All rights reserved.</p>
         {isVisible && (
           <button className="back-to-top" 
           title='back to top'
