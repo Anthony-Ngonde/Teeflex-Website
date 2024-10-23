@@ -50,6 +50,9 @@ function Footer() {
             <a href="https://www.youtube.com/@teeflexgymimara" target="_blank" rel="noopener noreferrer">
             <i className="fab fa-youtube"></i>
             </a>
+            <a href="https://t.me/s/flexfitnesscentre" target="_blank" rel="noopener noreferrer">
+            <i className="fab fa-telegram"></i>
+            </a>
           </div>
         </div>
         <div className="footer-links">

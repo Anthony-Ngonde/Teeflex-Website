@@ -8,7 +8,7 @@ function Contact() {
     event.preventDefault();
     const formData = new FormData(event.target);
 
-    formData.append("access_key", "8e41be63-9d7e-442c-86c6-f7e717bd1e6c");
+    formData.append("access_key", "3a0004ec-8c4b-426d-9030-16de1bd69f71");
 
     const object = Object.fromEntries(formData);
     const json = JSON.stringify(object);
@@ -50,7 +50,7 @@ function Contact() {
             any way we can!
           </p>
           <div className="contact-details">
-            <p><i className="fas fa-envelope"></i> charlesbiegon973@gmail.com</p>
+            <p><i className="fas fa-envelope"></i> teeflexgym@gmail.com</p>
             <p><i className="fas fa-phone"></i> 0715198135</p>
             <p><i className="fas fa-map-marker-alt"></i> Imara Daima, Nairobi</p>
           </div>
