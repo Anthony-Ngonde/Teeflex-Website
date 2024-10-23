@@ -18,7 +18,7 @@ function Navbar() {
       <div className="navbar-container">
         <div className="navbar-logo">
           <img src={logo} alt="Teeflex Fitness Logo" />
-          <span>TEEFLEX GYM</span>
+          <span>TEEFLEX GYM & FITNESS CENTER</span>
         </div>
         <div className="hamburger" onClick={toggleSidebar}>
           ☰

@@ -25,7 +25,12 @@ html {
   }
   
   .slide:nth-child(1) {
-    background-image: url('../../assets/gym.jpg');
+    background-image: url('../../assets/teeflex-photo.png');
+    background-size: cover; /* Or use 'contain' depending on the aspect ratio */
+    background-position: center;
+    background-repeat: no-repeat;
+    image-rendering: -webkit-optimize-contrast;
+    image-rendering: crisp-edges;
   }
   
   .slide:nth-child(2) {
