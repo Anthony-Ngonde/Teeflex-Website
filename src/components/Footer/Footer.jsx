@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import logo from '../../assets/teeflex-logo.png';
+import logo from '../../assets/footer-logo.png';
 import './Footer.css';
 
 function Footer() {
