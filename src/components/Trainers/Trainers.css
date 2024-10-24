@@ -76,6 +76,7 @@
 }
 
 @media (max-width: 480px) {
+
   .trainer-card {
     max-width: 300px; /* Slightly reduce the card size on smaller screens */
   }

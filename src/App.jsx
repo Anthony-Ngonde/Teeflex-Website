@@ -20,6 +20,7 @@ function App() {
         <Trainers />
         <Contact />
       </main>
+
       <Footer />
     </div>
   );
