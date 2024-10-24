@@ -1,102 +1,184 @@
 .membership {
-    padding: 4rem 0;
-    background-color: #fff;
-  }
-  
+  padding: 2rem 1rem; /* Reduce padding for smaller screens */
+  background-color: #fff;
+}
+
+.membership-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column; /* Default to column for better stacking on small screens */
+  justify-content: space-between;
+  align-items: stretch; /* Ensure full width on small devices */
+}
+
+/* Responsive adjustments for membership info and rates */
+.membership-info,
+.membership-rates {
+  margin: 1rem 0;
+  width: 100%; /* Full width on small screens */
+}
+
+/* Margin for membership-info on larger screens */
+@media (min-width: 768px) {
   .membership-container {
-    max-width: 1200px;
-    margin: 0 auto;
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    padding: 0 1rem;
+    flex-direction: row; /* Row layout for larger screens */
+    flex-wrap: wrap;
   }
   
   .membership-info {
-    flex: 1;
     margin-right: 2rem;
+    width: 48%; /* Allow side-by-side layout */
   }
-  
+
+  .membership-rates {
+    width: 48%; /* Allow side-by-side layout */
+  }
+}
+
+.membership-info h2 {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+  color: #333;
+}
+
+/* Font size adjustment for larger screens */
+@media (min-width: 768px) {
   .membership-info h2 {
     font-size: 2.5rem;
-    margin-bottom: 1rem;
-    color: #333;
   }
-  
-  .membership-info p {
-    margin-bottom: 2rem;
-    color: #666;
-  }
-  
+}
+
+.membership-info p {
+  margin-bottom: 1.5rem;
+  font-size: 0.9rem;
+  color: #666;
+}
+
+/* Responsive membership features layout */
+.membership-features {
+  display: flex;
+  flex-direction: column; /* Stack features vertically on small screens */
+}
+
+/* Display features in a row for larger screens */
+@media (min-width: 768px) {
   .membership-features {
-    display: flex;
+    flex-direction: row;
     justify-content: space-between;
   }
-  
-  .feature {
-    text-align: center;
-  }
-  
-  .feature i {
-    font-size: 3rem;
-    color: #00a8ff;
-    margin-bottom: 1rem;
-  }
-  
-  .feature h3 {
-    font-size: 1.2rem;
-    margin-bottom: 0.5rem;
-    color: #333;
-  }
-  
-  .feature p {
-    color: #666;
-  }
-  
-  .membership-rates {
-    flex: 1;
-    background-color: #fff;
-    padding: 2rem;
-    border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.feature {
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+/* Icon size and feature text adjustments */
+.feature i {
+  font-size: 2rem;
+  color: #00a8ff;
+  margin-bottom: 0.5rem;
+  transition: transform 0.3s ease;
+}
+
+.feature:hover i {
+  transform: translateY(-5px); 
+}
+
+.feature h3 {
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+  color: #333;
+}
+
+.feature p {
+  color: #666;
+}
+
+/* Membership rates styles */
+.membership-rates {
+  background-color: #fff;
+  padding: 1.5rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease; 
+}
+
+.membership-rates:hover {
+  transform: translateY(-5px); 
 }
 
 .membership-rates h3 {
-    font-size: 1.8rem;
-    margin-bottom: 1rem;
-    color: #333;
-    text-align: center;
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  color: #333;
+  text-align: center;
 }
 
 .membership-rates table {
-    width: 100%;
-    border-collapse: collapse;
-    background: linear-gradient(135deg, #d7effe, #eefaff);
+  width: 100%;
+  border-collapse: collapse;
+  background: linear-gradient(135deg, #d7effe, #eefaff);
 }
 
 .membership-rates th,
 .membership-rates td {
-    padding: 1rem;
-    text-align: center;
-    border: 1px solid #ddd;
+  padding: 0.8rem; /* Reduced padding for better fit */
+  text-align: center;
+  border: 1px solid #ddd;
 }
 
 .membership-rates th {
-    background-color: #009fff;
-    color: #fff;
+  background-color: #009fff;
+  color: #fff;
 }
 
 .membership-rates tr:nth-child(even) {
-    background-color: rgba(0, 159, 255, 0.1);
+  background-color: rgba(0, 159, 255, 0.1);
 }
 
 .membership-rates tr:hover {
   background-color: #d0eaff;
 }
-  
-  .contact {
-    margin-top: 1rem;
-    font-style: italic;
-    color: #666;
-    text-align: center;
+
+.contact {
+  margin-top: 1rem;
+  font-style: italic;
+  color: #666;
+  text-align: center;
+}
+
+/* Media queries for even smaller devices */
+@media (max-width: 480px) {
+  .membership-info h2 {
+    font-size: 1.5rem;
   }
+
+  .membership-info p {
+    font-size: 0.85rem;
+  }
+
+  .membership-rates h3 {
+    font-size: 1.2rem;
+  }
+
+  .feature i {
+    font-size: 1.8rem;
+  }
+
+  .feature h3 {
+    font-size: 1rem;
+  }
+
+  .contact {
+    font-size: 0.8rem;
+  }
+
+  .membership-rates table th,
+  .membership-rates table td {
+    font-size: 0.8rem; /* Smaller font size for small screens */
+    padding: 0.6rem;
+  }
+}
+

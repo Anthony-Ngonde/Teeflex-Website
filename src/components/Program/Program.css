@@ -1,102 +1,198 @@
+/* Global reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  overflow-x: hidden; /* Prevent horizontal scrolling */
+}
+
 .program {
-    padding: 4rem 0;
-    background: linear-gradient(135deg, #f0fbff, #e8f7ff);
-  }
-  
-  .program-container {
-    max-width: 1200px;
-    margin: 0 auto;
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    padding: 0 1rem;
-  }
-  
+  padding: 4rem 1rem;
+  background: linear-gradient(135deg, #f0fbff, #e8f7ff);
+}
+
+.program-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap; /* Allows wrapping on smaller screens */
+  justify-content: space-between;
+  align-items: flex-start;
+  width: 100%; /* Ensure container does not exceed viewport width */
+}
+
+/* Responsive adjustments for program info and timetable */
+.program-info,
+.program-timetable {
+  flex: 1;
+  margin: 1rem 0;
+  min-width: 0; /* Prevent flex items from overflowing */
+}
+
+
+
+/* Margin for program-info on larger screens */
+@media (min-width: 768px) {
   .program-info {
-    flex: 1;
     margin-right: 2rem;
   }
-  
+}
+
+.program-info h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: #333;
+}
+
+/* Font size adjustment for larger screens */
+@media (min-width: 768px) {
   .program-info h2 {
     font-size: 2.5rem;
-    margin-bottom: 1rem;
-    color: #333;
   }
-  
-  .program-info p {
-    margin-bottom: 2rem;
-    color: #666;
-  }
-  
+}
+
+.program-info p {
+  margin-bottom: 2rem;
+  color: #666;
+}
+
+/* Responsive program features layout */
+.program-features {
+  display: flex;
+  flex-direction: column; /* Stack features vertically on small screens */
+}
+
+/* Display features in a row for larger screens */
+@media (min-width: 768px) {
   .program-features {
-    display: flex;
+    flex-direction: row;
     justify-content: space-between;
   }
-  
-  .feature {
-    text-align: center;
-  }
-  
-  .feature i {
-    font-size: 3rem;
-    color: #00a8ff;
-    margin-bottom: 1rem;
-  }
-  
-  .feature h3 {
-    font-size: 1.2rem;
-    margin-bottom: 0.5rem;
-    color: #333;
-  }
-  
-  .feature p {
-    color: #666;
-  }
-  
-  .program-timetable {
-    flex: 1;
-    background-color: #fff;
-    padding: 2rem;
-    border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  }
-  
-  .program-timetable h3 {
-    font-size: 1.8rem;
-    margin-bottom: 1rem;
-    color: #333;
-    text-align: center;
-  }
-  
-  .program-timetable table {
-    width: 100%;
-    border-collapse: collapse;
-    background: linear-gradient(135deg, #d7effe, #eefaff);
-  }
-  
-  .program-timetable th,
-  .program-timetable td {
-    padding: 1rem;
-    text-align: center;
-    border: 1px solid #ddd;
-  }
-  
-  .program-timetable th {
-    background-color: #009fff;
-    color: #fff;
-  }
-  
-  .program-timetable tr:nth-child(even) {
-    background-color: rgba(0, 159, 255, 0.1);
+}
+
+.feature {
+  text-align: center;
+  margin-bottom: 2rem;
+  width: 100%; /* Prevent feature items from overflowing */
+}
+
+/* Icon size and feature text adjustments */
+.feature i {
+  font-size: 2.5rem;
+  color: #00a8ff;
+  margin-bottom: 1rem;
+  transition: transform 0.3s ease; /
+}
+
+.feature:hover i {
+  transform: translateY(-5px); 
+}
+
+.feature h3 {
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+  color: #333;
+}
+
+.feature p {
+  color: #666;
+}
+
+/* Program timetable styles */
+.program-timetable {
+  background-color: #fff;
+  padding: 1.5rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  width: 100%; /* Ensure table does not exceed the parent width */
+  max-width: 100%;
+  overflow-x: auto; /* Allow table scrolling if needed */
+  transition: transform 0.3s ease; /* Add transition for smooth hover effect */
+}
+
+.program-timetable:hover {
+  transform: translateY(-5px); /* Move the timetable up by 5px */
+}
+
+/* Responsive table styles */
+.program-timetable table {
+  width: 100%;
+  border-collapse: collapse;
+  background: linear-gradient(135deg, #d7effe, #eefaff);
+  table-layout: fixed; /* Fix table layout to avoid horizontal scroll */
+}
+
+.program-timetable th,
+.program-timetable td {
+  padding: 0.75rem;
+  text-align: center;
+  border: 1px solid #ddd;
+  word-wrap: break-word; /* Break long words to fit within cell */
+}
+
+/* Table header styling */
+.program-timetable th {
+  background-color: #009fff;
+  color: #fff;
+}
+
+/* Alternating row colors */
+.program-timetable tr:nth-child(even) {
+  background-color: rgba(0, 159, 255, 0.1);
+}
+
+.program-timetable tr:hover {
+  background-color: #d0eaff;
+}
+
+.charges {
+  margin-top: 1rem;
+  font-style: italic;
+  color: #666;
+  text-align: center;
+}
+
+/* Media queries for responsiveness */
+@media (max-width: 768px) {
+  .program-container {
+    flex-direction: column; /* Stack program-info and timetable vertically */
+    align-items: stretch;
   }
 
-  .program-timetable tr:hover {
-    background-color: #d0eaff;
+  .program-info h2 {
+    font-size: 1.8rem;
   }
-  
+
+  .program-info p {
+    font-size: 1rem;
+  }
+
+  .program-timetable h3 {
+    font-size: 1.2rem;
+  }
+
+  .feature i {
+    font-size: 2rem;
+  }
+
+  .feature h3 {
+    font-size: 1rem;
+  }
+
   .charges {
-    margin-top: 1rem;
-    font-style: italic;
-    color: #666;
-    text-align: center;
+    font-size: 0.9rem;
   }
+
+  .program-timetable th,
+  .program-timetable td {
+    font-size: 0.9rem; /* Reduce font size for smaller screens */
+    padding: 0.5rem; /* Adjust padding */
+  }
+
+}
+

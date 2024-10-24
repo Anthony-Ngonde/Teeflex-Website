@@ -1,83 +1,184 @@
 .footer {
-    background-color: #fff;
-    color: #666; /* Match paragraph text color from About section */
-    padding: 4rem 0 2rem;
+  background-color: #fff;
+  color: #666;
+  padding: 4rem 1rem 2rem; /* Added padding on smaller screens */
+}
+
+.footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column; /* Stack content vertically on small screens */
+  align-items: center;
+  gap: 2rem;
+}
+.footer-bottom {
+  text-align: center;
+  margin-top: 2rem;
+  position: relative;
+}
+
+.back-to-top {
+  position: fixed;
+  right: 20px;
+  bottom: 40px;
+  background-color: #000;
+  color: #fff;
+  border: none;
+  padding: 0.8rem 1.2rem;
+  font-size: 1.2rem;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+  z-index: 1000;
+  animation: jump 1s infinite;
+}
+
+/* Change background color on hover */
+.back-to-top:hover {
+  background-color: #00a8ff;
+}
+
+/* Define the jumping animation */
+@keyframes jump {
+  0%, 100% {
+    transform: translateY(0);
   }
-  
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+
+/* Adjust layout for larger screens */
+@media (min-width: 768px) {
   .footer-container {
-    max-width: 1200px;
-    margin: 0 auto;
-    display: flex;
+    flex-direction: row; /* Row layout for medium to large screens */
     justify-content: space-between;
+    align-items: flex-start;
     padding: 0 1rem;
   }
-  
+}
+
+.footer-logo {
+  flex: 1;
+  margin-right: 0;
+  text-align: center; /* Center-align logo on small screens */
+}
+
+/* For larger screens, adjust alignment */
+@media (min-width: 768px) {
   .footer-logo {
-    flex: 1;
+    text-align: left;
     margin-right: 2rem;
   }
-  
-  .footer-logo img {
-    width: 100px;
-    margin-bottom: 1rem;
+}
+
+.footer-logo img {
+  width: 100px;
+  margin-bottom: 1rem;
+}
+
+.footer-logo p {
+  color: #666;
+  margin-bottom: 1rem;
+}
+
+.social-icons {
+  display: flex;
+  justify-content: center;
+}
+
+/* Align social icons to the left on larger screens */
+@media (min-width: 768px) {
+  .social-icons {
+    justify-content: flex-start;
   }
-  
-  .footer-logo p {
-    color: #666; /* Match paragraph text color from About section */
-    margin-bottom: 1rem;
-  }
-  
-  .social-icons a {
-    color: #666; /* Match social icon color to text color */
-    font-size: 1.5rem;
-    margin-right: 1rem;
-    transition: color 0.3s ease;
-  }
-  
-  .social-icons a:hover {
-    color: #00a8ff; /* Color when hovered */
-  }
-  
+}
+
+.social-icons a {
+  color: #666;
+  font-size: 1.5rem;
+  margin-right: 1rem;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.social-icons a:hover {
+  color: #00a8ff;
+  transform: translateY(-5px);
+}
+
+/* Footer links section */
+.footer-links {
+  flex: 2;
+  display: flex;
+  flex-direction: column; /* Stack links vertically on small screens */
+  gap: 2rem;
+  text-align: center; /* Center-align links on small screens */
+}
+
+/* Layout adjustments for larger screens */
+@media (min-width: 768px) {
   .footer-links {
-    flex: 2;
-    display: flex;
+    flex-direction: row; /* Row layout for medium to large screens */
     justify-content: space-between;
+    text-align: left;
   }
-  
+}
+
+.link-column h3 {
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+  color: #333;
+}
+
+.link-column ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.link-column li {
+  margin-bottom: 0.5rem;
+}
+
+.link-column a {
+  color: #666;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.link-column a:hover {
+  color: #00a8ff;
+}
+
+/* Footer bottom section */
+.footer-bottom {
+  max-width: 1200px;
+  margin: 2rem auto 0;
+  text-align: center;
+  padding-top: 2rem;
+  border-top: 1px solid #333;
+}
+
+.footer-bottom p {
+  color: #666;
+}
+
+/* Additional adjustments for smaller screens */
+@media (max-width: 480px) {
+  .footer-logo img {
+    width: 80px; /* Slightly reduce logo size */
+  }
+
   .link-column h3 {
-    font-size: 1.2rem;
-    margin-bottom: 1rem;
-    color: #333; /* Match heading color from About section */
+    font-size: 1rem;
   }
-  
-  .link-column ul {
-    list-style-type: none;
-  }
-  
-  .link-column li {
-    margin-bottom: 0.5rem;
-  }
-  
+
   .link-column a {
-    color: #666; /* Match link text color from About section */
-    text-decoration: none;
-    transition: color 0.3s ease;
+    font-size: 0.9rem;
   }
-  
-  .link-column a:hover {
-    color: #00a8ff; /* Color when hovered */
+
+  .social-icons a {
+    font-size: 1.3rem;
   }
-  
-  .footer-bottom {
-    max-width: 1200px;
-    margin: 0 auto;
-    text-align: center;
-    padding-top: 2rem;
-    border-top: 1px solid #333;
-    margin-top: 2rem;
-  }
-  
-  .footer-bottom p {
-    color: #666; /* Match paragraph text color from About section */
-  }
-  
+}

@@ -22,7 +22,7 @@ function Program() {
               <p>Join our energetic group workout sessions</p>
             </div>
             <div className="feature">
-              <i className="fas fa-user-clock"></i>
+              <i className="fas fa-chalkboard-teacher"></i>
               <h3>Personal Training</h3>
               <p>Get one-on-one attention from our expert trainers</p>
             </div>

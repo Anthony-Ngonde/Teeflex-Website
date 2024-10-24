@@ -1,59 +1,91 @@
 .trainers {
-    padding: 4rem 0;
-    background-color: #fff;
-    
-  }
-  
-  .trainers-container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 1rem;
-  }
-  
-  .trainers h2 {
-    font-size: 2.5rem;
-    margin-bottom: 2rem;
-    text-align: center;
-    color: #333;
-  }
-  
-  .trainer-cards {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-  }
-  
+  padding: 4rem 1rem;
+  background-color: #fff;
+}
+
+.trainers-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.trainers h2 {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  text-align: center;
+  color: #333;
+}
+
+.trainer-card {
+  width: 100%;
+  max-width: 600px;
+  background-color: #fff;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+  margin: 0 auto 2rem;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: #00a8ff; /* Theme color for the border */
+}
+
+.trainer-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.25);
+}
+
+/* Trainer Image Styling */
+.trainer-image {
+  width: 100%;
+  height: auto;
+  max-height: 600px;
+  object-fit: cover;
+  object-position: center;
+  border-bottom: #00a8ff; /* Theme color for a stronger separation */
+}
+
+.trainer-card h3 {
+  font-size: 1.5rem;
+  margin: 1rem 0 0.5rem;
+  color: #333;
+  font-weight: bold;
+}
+
+.trainer-card p {
+  font-size: 1.1rem;
+  margin-bottom: 1rem;
+  color: #666;
+}
+
+/* Add button to interact with the trainer card */
+.trainer-card .trainer-btn {
+  display: inline-block;
+  margin: 1rem 0;
+  padding: 0.7rem 1.5rem;
+  background-color:#00a8ff; /* Theme color */
+  color: #fff;
+  font-size: 1rem;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.trainer-card .trainer-btn:hover {
+  background-color:#00a8ff; /* Slightly darker green for hover effect */
+}
+
+@media (max-width: 480px) {
+
   .trainer-card {
-    width: calc(33.333% - 1rem);
-    background-color: #fff;
-    border-radius: 10px;
-    overflow: hidden;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    margin-bottom: 2rem;
-  }
-  
-  .trainer-image {
-    height: 200px;
-    background-color: #ddd;
-  }
-  
-  .trainer-card h3 {
-    font-size: 1.2rem;
-    margin: 1rem 0 0.5rem;
-    text-align: center;
-    color: #333;
-  }
-  
-  .trainer-card p {
-    font-size: 1rem;
-    margin-bottom: 1rem;
-    text-align: center;
-    color: #666;
+    max-width: 300px; /* Slightly reduce the card size on smaller screens */
   }
 
-  .trainer-image {
-    width: 100%;
-    height: auto;
-    border-radius: 50%; 
-    object-fit: cover;
+  .trainer-card h3 {
+    font-size: 1.2rem;
   }
+
+  .trainer-card p {
+    font-size: 1rem;
+  }
+}
