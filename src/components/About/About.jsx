@@ -1,4 +1,5 @@
 import React from 'react';
+import about_img from '../../assets/about-photo.jpg'
 import './About.css';
 
 function About() {
@@ -6,7 +7,7 @@ function About() {
     <section id="about" className="about">
       <div className="about-container">
         <div className="about-image">
-          <img src="src/assets/body.svg" loading='lazy' alt="About Teeflex Gym" />
+          <img src={about_img} loading='lazy' alt="About Teeflex Gym" />
         </div>
         <div className="about-content">
           <h2>About</h2>

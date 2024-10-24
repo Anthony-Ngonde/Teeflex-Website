@@ -5,7 +5,7 @@ import './Trainers.css';
 function Trainers() {
     const trainer = {
         name: 'Augustine Otieno',
-        specialty: 'Strength & Conditioning',
+        specialty: 'Body Building and Fat Loss',
         image: trainer_img
     };
 
