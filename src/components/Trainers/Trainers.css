@@ -18,11 +18,12 @@
 
 .trainer-card {
   width: 100%;
+  max-width: 400px; /* Limit the container width to a smaller size */
   background-color: #fff;
   border-radius: 10px;
   overflow: hidden;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  margin-bottom: 2rem;
+  margin: 0 auto 2rem; /* Center the card horizontally and add margin below */
   text-align: center;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
@@ -35,9 +36,10 @@
 /* Trainer Image Styling */
 .trainer-image {
   width: 100%;
-  height: 400px; /* Increased height for a bigger image */
-  background-color: #ddd;
-  object-fit: cover;
+  height: auto; /* Let the image scale with the container */
+  max-height: 300px; /* Reduce the maximum height of the image */
+  object-fit: cover; /* Ensures the image covers the container without distortion */
+  object-position: center;
 }
 
 .trainer-card h3 {
