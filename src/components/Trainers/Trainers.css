@@ -4,77 +4,51 @@
 }
 
 .trainers-container {
-  max-width: 1200px;
+  max-width: 800px;
   margin: 0 auto;
   padding: 0 1rem;
+  text-align: center;
 }
 
 .trainers h2 {
   font-size: 2rem;
   margin-bottom: 2rem;
-  text-align: center;
   color: #333;
 }
 
-.trainer-card {
-  width: 100%;
-  max-width: 600px;
-  background-color: #fff;
-  border-radius: 15px;
+/* Updated Image Container */
+.trainer-image-container {
+  max-width: 250px;
+  margin: 0 auto;
   overflow: hidden;
-  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
-  margin: 0 auto 2rem;
-  text-align: center;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  border: #00a8ff; /* Theme color for the border */
+  border-radius: 15px;
+  border: none;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
 }
 
-.trainer-card:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.25);
-}
-
-/* Trainer Image Styling */
-.trainer-image {
+/* Ensure the image fills the container with no extra white space */
+.trainer-image-small {
   width: 100%;
   height: auto;
-  max-height: 600px;
   object-fit: cover;
-  object-position: center;
-  border-bottom: #00a8ff; /* Theme color for a stronger separation */
+  display: block; /* Ensures the image is treated as a block element */
+  margin: 0; /* Removes any potential margin */
 }
 
-.trainer-card h3 {
+/* Trainer Name Styling */
+.trainer-name {
   font-size: 1.5rem;
-  margin: 1rem 0 0.5rem;
-  color: #333;
   font-weight: bold;
+  color: #333;
+  margin-top: 1rem;
 }
 
-.trainer-card p {
-  font-size: 1.1rem;
-  margin-bottom: 1rem;
-  color: #666;
-}
-
-/* Add button to interact with the trainer card */
-.trainer-card .trainer-btn {
-  display: inline-block;
-  margin: 1rem 0;
-  padding: 0.7rem 1.5rem;
-  background-color:#00a8ff; /* Theme color */
-  color: #fff;
+/* Description Styling */
+.trainer-description {
   font-size: 1rem;
-  border: none;
-  border-radius: 30px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
+  color: #666;
+  margin-top: 0.5rem;
 }
-
-.trainer-card .trainer-btn:hover {
-  background-color:#00a8ff; /* Slightly darker green for hover effect */
-}
-
 @media (max-width: 480px) {
 
   .trainer-card {
