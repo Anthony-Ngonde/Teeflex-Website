@@ -1,5 +1,4 @@
 import './index.css';
-import { Route, Routes } from 'react-router-dom';
 import Navbar from './components/Navbar/Navbar';
 import Home from './components/Home/Home';
 import Program from './components/Program/Program';
@@ -14,10 +13,6 @@ function App() {
     <div className='App'>
       <Navbar />
       <main>
-        <Routes>
-          {/* <Route path="/signup" element={<SignUp />} /> Sign Up Route */}
-        </Routes>
-        {/* Render other components without routing */}
         <Home />
         <Program />
         <Membership />
@@ -25,6 +20,7 @@ function App() {
         <Trainers />
         <Contact />
       </main>
+
       <Footer />
     </div>
   );
