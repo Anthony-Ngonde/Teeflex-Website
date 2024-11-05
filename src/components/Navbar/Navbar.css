@@ -35,6 +35,29 @@
   font-size: 1.5rem;
 }
 
+/* Register Button */
+.register-button {
+  background-color: #00a8ff;
+  color: #fff;
+  border: none;
+  padding: 0.5rem 1rem;
+  font-weight: bold;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  margin-left: 1rem;
+}
+
+/* Hover and Active Effects */
+.register-button:hover {
+  background-color: #007bbd;
+}
+
+.register-button:active {
+  transform: scale(0.95);
+}
+
+
 /* Hide hamburger menu on larger screens */
 @media (min-width: 768px) {
   .hamburger {
@@ -96,4 +119,16 @@
 
 .navbar-menu a:hover {
   color: #00a8ff;
+}
+
+@media (min-width: 768px) {
+  .navbar-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .register-button {
+    margin-left: auto; /* Push it to the far right */
+  }
 }

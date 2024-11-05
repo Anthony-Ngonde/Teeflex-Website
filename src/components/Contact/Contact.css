@@ -141,6 +141,8 @@
     margin-right: 10px;
     font-size: 20px;
   }
+
+  
   
   /* Adjust button width on larger screens */
   @media (min-width: 768px) {
