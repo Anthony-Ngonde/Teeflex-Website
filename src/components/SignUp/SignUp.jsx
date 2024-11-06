@@ -10,10 +10,26 @@ const SignUp = () => {
 
     const submitForm = (data) => {
 
-        console.log(data);
+
+        if(data.password === data.confirmPassword){
+
+
+        const requestOptions = {
+            method:"POST",
+            headers:{
+                'content-type':'application/json'
+            },
+            body:{}
+        }
+
+        fetch('http://localhost:5000/signup', requestOptions)
 
         reset()
+
+    }
+
     };
+
 
     console.log(watch("name"));
     console.log(watch("email"));
