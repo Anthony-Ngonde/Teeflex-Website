@@ -32,10 +32,13 @@ const SignUp = () => {
                             placeholder='Your name'
                             {...register("name", { required: true, maxLength: 25 })}
                         />
-                        
+                        <br></br>
+                        {errors.name && <span style={{color:"red"}}>Name is required</span>}
+                        <br></br>
+                        {errors.name?.type=="maxLength"&&<span style={{color:"red"}}>Max characters should be 25</span>}
                     </FormGroup>
-                    {errors.name && <span style={{color:"red"}}>Name is required</span>}
-                    <br />
+                    
+                    <br></br>
                     <FormGroup>
                         <FormLabel>Email</FormLabel>
                         <FormControl
@@ -43,10 +46,13 @@ const SignUp = () => {
                             placeholder='Your email'
                             {...register("email", { required: true, maxLength: 80 })}
                         />
-                        
+                        <br></br>
+                        {errors.email && <span style={{color:"red"}}>Email is required</span>}
+                        <br></br>
+                        {errors.email?.type=="maxLength"&&<span style={{color:"red"}}>Max characters should be 80</span>}
                     </FormGroup>
-                    {errors.email && <span style={{color:"red"}}>Email is required</span>}
-                    <br />
+                    
+                    <br></br>
                     <FormGroup>
                         <FormLabel>Password</FormLabel>
                         <FormControl
@@ -54,10 +60,13 @@ const SignUp = () => {
                             placeholder='Your password'
                             {...register("password", { required: true, minLength: 8 })}
                         />
-                        
+                        <br></br>
+                        {errors.password && <span style={{color:"red"}}>Password is required</span>}
+                        <br></br>
+                        {errors.password?.type=="minLength"&&<span style={{color:"red"}}>Min characters should be 8</span>}
                     </FormGroup>
-                    {errors.password && <span style={{color:"red"}}>Password must be at least 8 characters</span>}
-                    <br />
+                    
+                    <br></br>
                     <FormGroup>
                         <FormLabel>Confirm Password</FormLabel>
                         <FormControl
@@ -65,10 +74,13 @@ const SignUp = () => {
                             placeholder='Confirm your password'
                             {...register("confirmPassword", { required: true, minLength: 8 })}
                         />
-                        
+                        <br></br>
+                        {errors.confirmPassword && <span style={{color:"red"}}>Confirm Password is required</span>}
+                        <br></br>
+                        {errors.confirmPassword?.type=="minLength"&&<span style={{color:"red"}}>Min characters should be 8</span>}
                     </FormGroup>
-                    {errors.confirmPassword && <span style={{color:"red"}}>Password must be at least 8 characters</span>}
-                    <br />
+                    
+                    <br></br>
                     <FormGroup>
                         <Button type='submit' variant='primary'>Sign Up</Button>
                     </FormGroup>
