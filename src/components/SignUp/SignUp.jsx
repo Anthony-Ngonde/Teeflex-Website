@@ -33,9 +33,9 @@ const SignUp = () => {
                             {...register("name", { required: true, maxLength: 25 })}
                         />
                         <br></br>
-                        {errors.name && <span style={{color:"red"}}>Name is required</span>}
+                        {errors.name && <p style={{color:"red"}}><small>Name is required</small></p>}
                         <br></br>
-                        {errors.name?.type=="maxLength"&&<span style={{color:"red"}}>Max characters should be 25</span>}
+                        {errors.name?.type==="maxLength"&&<p style={{color:"red"}}><small>Max characters should be 25</small></p>}
                     </FormGroup>
                     
                     <br></br>
@@ -47,9 +47,9 @@ const SignUp = () => {
                             {...register("email", { required: true, maxLength: 80 })}
                         />
                         <br></br>
-                        {errors.email && <span style={{color:"red"}}>Email is required</span>}
+                        {errors.email && <p style={{color:"red"}}><small>Email is required</small></p>}
                         <br></br>
-                        {errors.email?.type=="maxLength"&&<span style={{color:"red"}}>Max characters should be 80</span>}
+                        {errors.email?.type==="maxLength"&&<p style={{color:"red"}}><small>Max characters should be 80</small></p>}
                     </FormGroup>
                     
                     <br></br>
@@ -61,9 +61,9 @@ const SignUp = () => {
                             {...register("password", { required: true, minLength: 8 })}
                         />
                         <br></br>
-                        {errors.password && <span style={{color:"red"}}>Password is required</span>}
+                        {errors.password && <p style={{color:"red"}}><small>Password is required</small></p>}
                         <br></br>
-                        {errors.password?.type=="minLength"&&<span style={{color:"red"}}>Min characters should be 8</span>}
+                        {errors.password?.type==="minLength"&&<p style={{color:"red"}}><small>Min characters should be 8</small></p>}
                     </FormGroup>
                     
                     <br></br>
@@ -75,9 +75,9 @@ const SignUp = () => {
                             {...register("confirmPassword", { required: true, minLength: 8 })}
                         />
                         <br></br>
-                        {errors.confirmPassword && <span style={{color:"red"}}>Confirm Password is required</span>}
+                        {errors.confirmPassword && <p style={{color:"red"}}><small>Confirm Password is required</small></p>}
                         <br></br>
-                        {errors.confirmPassword?.type=="minLength"&&<span style={{color:"red"}}>Min characters should be 8</span>}
+                        {errors.confirmPassword?.type==="minLength"&&<p style={{color:"red"}}><small>Min characters should be 8</small></p>}
                     </FormGroup>
                     
                     <br></br>
