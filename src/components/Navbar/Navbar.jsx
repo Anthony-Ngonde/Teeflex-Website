@@ -40,7 +40,6 @@ function Navbar() {
           ☰
         </div>
         
-        {/* Register Button */}
         <button className="register-button" onClick={handleRegisterClick}>Register</button>
       </div>
     </nav>
