@@ -13,19 +13,32 @@ const SignUp = () => {
 
         if(data.password === data.confirmPassword){
 
+            const body={
+                name:data.name,
+                email:data.email,
+                password:data.password,
+            }
+
 
         const requestOptions = {
             method:"POST",
             headers:{
                 'content-type':'application/json'
             },
-            body:{}
+            body:JSON.stringify(body)
         }
 
         fetch('http://localhost:5000/signup', requestOptions)
+        .then(res=>res.json())
+        .then(data=>console.log(data))
+        .catch(err=>console.log(err))
 
         reset()
 
+    }
+
+    else{
+        alert("Passwords do not match")
     }
 
     };
