@@ -1,10 +1,12 @@
 import React, { useState } from 'react';
-import { Form, Button, FormControl, FormGroup, FormLabel } from 'react-bootstrap';
+import { Form, Button, Alert, FormControl, FormGroup, FormLabel } from 'react-bootstrap';
 import { useForm } from 'react-hook-form'
 import './SignUp.css';
 
 const SignUp = () => {
     const { register, handleSubmit, reset, formState: { errors }, watch } = useForm();
+
+    const [show, setShow] = useState(true)
 
 
 
@@ -53,6 +55,14 @@ const SignUp = () => {
         <div className='container'>
             <div className='form'>
                 <h1>Registration Page</h1>
+             <Alert variant="danger" onClose={() => setShow (false)} dismissible>
+                    <Alert.Heading>Oh snap! You got an error!</Alert.Heading>
+                    <p>
+                    Change this and that and try again. Duis mollis, est non commodo
+                    luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.
+                    Cras mattis consectetur purus sit amet fermentum.
+                    </p>
+             </Alert>
                 <form onSubmit={handleSubmit(submitForm)}>
                     <FormGroup>
                         <FormLabel>Name</FormLabel>
