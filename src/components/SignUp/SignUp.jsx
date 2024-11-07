@@ -6,7 +6,9 @@ import './SignUp.css';
 const SignUp = () => {
     const { register, handleSubmit, reset, formState: { errors }, watch } = useForm();
 
-    const [show, setShow] = useState(true)
+    const [show, setShow] = useState(false)
+
+    const [serverResponse, setServerResponse] = useState('')
 
 
 
@@ -32,7 +34,13 @@ const SignUp = () => {
 
         fetch('http://localhost:5000/signup', requestOptions)
         .then(res=>res.json())
-        .then(data=>console.log(data))
+        .then(data=>{
+            console.log(data)
+            setServerResponse(data.message)
+            console.log(serverResponse)
+
+            setShow(true)
+        })
         .catch(err=>console.log(err))
 
         reset()
@@ -54,15 +62,23 @@ const SignUp = () => {
     return (
         <div className='container'>
             <div className='form'>
-                <h1>Registration Page</h1>
-             <Alert variant="danger" onClose={() => setShow (false)} dismissible>
-                    <Alert.Heading>Oh snap! You got an error!</Alert.Heading>
-                    <p>
-                    Change this and that and try again. Duis mollis, est non commodo
-                    luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.
-                    Cras mattis consectetur purus sit amet fermentum.
-                    </p>
+                
+             {show?
+             <>
+             <Alert variant="success" onClose={() => setShow (false)} dismissible>
+                <p>
+                {serverResponse}
+                </p>
              </Alert>
+
+              <h1>Registration Page</h1>
+               
+             </>
+             :
+             <h1>Registration Page</h1>
+            
+             
+             }
                 <form onSubmit={handleSubmit(submitForm)}>
                     <FormGroup>
                         <FormLabel>Name</FormLabel>
@@ -73,7 +89,7 @@ const SignUp = () => {
                         />
                         <br></br>
                         {errors.name && <p style={{color:"red"}}><small>Name is required</small></p>}
-                        <br></br>
+                        {/* <br></br> */}
                         {errors.name?.type==="maxLength"&&<p style={{color:"red"}}><small>Max characters should be 25</small></p>}
                     </FormGroup>
                     
@@ -87,7 +103,7 @@ const SignUp = () => {
                         />
                         <br></br>
                         {errors.email && <p style={{color:"red"}}><small>Email is required</small></p>}
-                        <br></br>
+                        {/* <br></br> */}
                         {errors.email?.type==="maxLength"&&<p style={{color:"red"}}><small>Max characters should be 80</small></p>}
                     </FormGroup>
                     
@@ -101,7 +117,7 @@ const SignUp = () => {
                         />
                         <br></br>
                         {errors.password && <p style={{color:"red"}}><small>Password is required</small></p>}
-                        <br></br>
+                        {/* <br></br> */}
                         {errors.password?.type==="minLength"&&<p style={{color:"red"}}><small>Min characters should be 8</small></p>}
                     </FormGroup>
                     
@@ -115,7 +131,7 @@ const SignUp = () => {
                         />
                         <br></br>
                         {errors.confirmPassword && <p style={{color:"red"}}><small>Confirm Password is required</small></p>}
-                        <br></br>
+                        {/* <br></br> */}
                         {errors.confirmPassword?.type==="minLength"&&<p style={{color:"red"}}><small>Min characters should be 8</small></p>}
                     </FormGroup>
                     
