@@ -89,7 +89,7 @@ const SignUp = () => {
                         />
                         <br></br>
                         {errors.name && <p style={{color:"red"}}><small>Name is required</small></p>}
-                        {/* <br></br> */}
+                        <br></br>
                         {errors.name?.type==="maxLength"&&<p style={{color:"red"}}><small>Max characters should be 25</small></p>}
                     </FormGroup>
                     
@@ -103,7 +103,7 @@ const SignUp = () => {
                         />
                         <br></br>
                         {errors.email && <p style={{color:"red"}}><small>Email is required</small></p>}
-                        {/* <br></br> */}
+                        <br></br>
                         {errors.email?.type==="maxLength"&&<p style={{color:"red"}}><small>Max characters should be 80</small></p>}
                     </FormGroup>
                     
@@ -117,7 +117,7 @@ const SignUp = () => {
                         />
                         <br></br>
                         {errors.password && <p style={{color:"red"}}><small>Password is required</small></p>}
-                        {/* <br></br> */}
+                        <br></br>
                         {errors.password?.type==="minLength"&&<p style={{color:"red"}}><small>Min characters should be 8</small></p>}
                     </FormGroup>
                     
@@ -131,7 +131,7 @@ const SignUp = () => {
                         />
                         <br></br>
                         {errors.confirmPassword && <p style={{color:"red"}}><small>Confirm Password is required</small></p>}
-                        {/* <br></br> */}
+                        <br></br>
                         {errors.confirmPassword?.type==="minLength"&&<p style={{color:"red"}}><small>Min characters should be 8</small></p>}
                     </FormGroup>
                     
