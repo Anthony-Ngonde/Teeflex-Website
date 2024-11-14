@@ -49,13 +49,13 @@
 }
 
 /* Hover and Active Effects */
-.register-button:hover {
+/* .register-button:hover {
   background-color: #007bbd;
 }
 
 .register-button:active {
   transform: scale(0.95);
-}
+} */
 
 
 /* Hide hamburger menu on larger screens */
@@ -128,7 +128,7 @@
     justify-content: space-between;
   }
 
-  .register-button {
-    margin-left: auto; /* Push it to the far right */
-  }
+  /* .register-button {
+    margin-left: auto; Push it to the far right */
+  /* } */
 }

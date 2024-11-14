@@ -24,7 +24,7 @@ function Navbar() {
       <div className="navbar-container">
         <div className="navbar-logo">
           <img src={logo} alt="Teeflex Fitness Logo" />
-          <span>TEEFLEX GYM & FITNESS CENTER</span>
+          <span>TEEFLEX GYM AND FITNESS CENTER</span>
         </div>
         
         <ul className={`navbar-menu ${isSidebarOpen ? 'active' : ''}`}>
@@ -40,7 +40,7 @@ function Navbar() {
           ☰
         </div>
         
-        <button className="register-button" onClick={handleRegisterClick}>Register</button>
+        {/* <button className="register-button" onClick={handleRegisterClick}>Register</button> */}
       </div>
     </nav>
   );
